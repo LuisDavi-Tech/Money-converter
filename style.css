@@ -1,4 +1,10 @@
-
+@keyframes moeda{
+    from{
+        transform: translateX(-35%);
+    }to{
+        transform: translateX(0%);
+    }
+}
 
 
 
@@ -21,10 +27,13 @@ body{
 *{
     font-family: sans-serif;
 }
+
+
 #result{
     color: rgb(0, 0, 0);
     font-size: xx-large;
 }
+
 .indexdiv{
     display: flex;
     height: 70%;
@@ -36,26 +45,31 @@ body{
     background-color: rgb(255, 255, 255);
     backdrop-filter: blur(5px);
     border: hidden;
+   
 }
-form{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 #moeda{
     height: 30px;
     width: 50%;
     margin-bottom: 10%;
     background-color: rgba(255, 255, 255, 0.781);
     border: none;
-    border-bottom: rgb(98, 175, 5) solid;
+    border-bottom: #46e8eb solid;
     outline: none;
     margin-top: 5%;
+    border-bottom: rgb(1, 174, 255) 2px solid;
+    
 
 }
+#animInput{
+    position: absolute;
+
+    height: 30px;
+    width: 50%;
+    border: none;
+    z-index: 1;
+}
+
 .converter{
     height: 50px;
     width: 50%;
@@ -65,7 +79,7 @@ form{
     background-color: #01f784;
     border: none;
     border-radius: 11px;
-    transition:  700ms;
+    transition: box-shadow 700ms;
     font-size: medium;
     margin-bottom: 5%;
 }
