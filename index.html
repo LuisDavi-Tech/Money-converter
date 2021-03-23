@@ -10,11 +10,15 @@
 </head>
 <body>
     <div id="app">
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" id='alura'>
         <div class="indexdiv">
+
             <h1>Conversor de Dolar</h1>
-            <input type="number" id="moeda" min="1" placeholder="Valor em Reais" v-model="input">
+            <div id="animInput"> </div>
+            <input type="number" id="moeda" min="1" placeholder="Valor em Reais" v-model="input" name="input">
             <button class="converter" v-on:click="converter()"> Converter </button>
-            <p>Valor de Reais em Dolar é: {{ result }}</p>
+            
+            <p>Resultado: {{ result }}</p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -23,11 +27,13 @@
             el: "#app",
             data:{
                 input: "",
-                result: 0
+                result: ""
             },
             methods: {
                 converter: function(){
-                    this.result = this.input / 5.1
+                    let Calc = this.input / 5.51
+                    this.result = "$" + Calc.toFixed(2)
+
                 }
             }
         
